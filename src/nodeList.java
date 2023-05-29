@@ -19,6 +19,7 @@ public class NodeList {
         return nodes;
     }
 
+    // Print all the nodes in the list
     public void printNodes() {
         List<Node> nodes = getNodes();
         for (Node node : nodes) {
@@ -26,6 +27,7 @@ public class NodeList {
         }
     }
 
+    // Print one of the nodes manually by index location
     public void printOneNode() {
         List<Node> nodes = getNodes();
         Node node1 = nodes.get(0);
@@ -33,6 +35,7 @@ public class NodeList {
         System.out.println(printName);
     }
 
+    // Calculates the distance between 2 nodes using the math module and Pythagoras
     public double getDistance(Node node1, Node node2) {
         double differenceSqaureX = Math.pow(node1.getXPos() - node2.getXPos(), 2);
         double differenceSqaureY = Math.pow(node1.getYPos() - node2.getYPos(), 2);
@@ -44,13 +47,21 @@ public class NodeList {
         System.out.println("The distance between " + node1.getName() + " and " + node2.getName() + " is: " + distance);
     }
 
+    /* 
+     * Using the random module to pick a random node to start at.
+     * While the nodes list is not empty it loops over all nodes remaining in the list and checks the
+     * distance between the starting/current node and checks the distance for the shortest distance
+     * using a for each loop.
+     * It stores the node with shortest distance in the newRoute list and remove it from nodes list.
+     * It repeats till the nodes list is empty and prints the result.
+     */
     public void solve() {
         Random random = new Random();
         List<Node> newRoute = new ArrayList<>();
         List<Node> nodes = getNodes();
         
         int startNode = random.nextInt(nodes.size());
-        // int startNode = 0;
+        // int startNode = 0; // Choose the node you want to start at manually
         newRoute.add(nodes.get(startNode));
         nodes.remove(startNode);
 
