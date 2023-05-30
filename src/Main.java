@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         
-        NodeList nodeList = new NodeList();
+        nodeList nodeList = new nodeList();
         Node leeuwarden = new Node("Leeuwarden",53.201390,5.808590);
         Node utrecht = new Node("Utrecht", 52.090830,5.122220);
         Node groningen = new Node("Groningen",53.219170,6.566670);

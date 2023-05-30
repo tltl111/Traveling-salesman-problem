@@ -4,10 +4,10 @@ import java.lang.Math;
 import java.util.Random;
 
 
-public class NodeList {
+public class nodeList {
     private List<Node> nodes;
 
-    public NodeList() {
+    public nodeList() {
         this.nodes = new ArrayList<>();
     }
 
