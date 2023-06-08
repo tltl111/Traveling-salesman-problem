@@ -20,6 +20,8 @@ public class Main {
         Node denhaag = new Node("Den haag", 52.076670, 4.298610);
         Node middelburg = new Node("Middelburg", 51.500000, 3.613890);
         Node shertogenbosch = new Node("'s Hertogenbosch", 51.699170, 5.304170);
+        Node amersfoort = new Node("Amersfoort", 52.15600, 5.38967);
+        Node denhelder = new Node("Den Helder", 52.93898, 4.75402);
 
         nodeList.addNode(leeuwarden);
         nodeList.addNode(utrecht);
@@ -49,6 +51,8 @@ public class Main {
         nodeList.addNode(denhaag);
         nodeList.addNode(middelburg);
         nodeList.addNode(shertogenbosch);
+        // nodeList.addNode(amersfoort);
+        // nodeList.addNode(denhelder);
 
         long startTimeBrute = System.nanoTime();
         BruteForce.BruteForceSolve(nodeList);
